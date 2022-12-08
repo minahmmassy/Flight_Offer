@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!-- Favicon -->
+    <!-- <link rel="apple-touch-icon" sizes="180x180" href="static/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="static/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="static/favicon/favicon-16x16.png">
+<link rel="manifest" href="static/favicon/site.webmanifest"> -->
+    <link rel="shortcut icon" href="/static/favicon/icon.png" />
+
+    <!-- Google font -->
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Jquery Smoothness -->
+    <link
+      href="https://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.min.css"
+      rel="stylesheet"
+    />
+    <!-- owl -->
+    <link rel="stylesheet" href="/static/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="/static/css/owl.theme.default.min.css" />
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css" />
+    <!-- FONT AWeSOME -->
+    <link rel="stylesheet" href="/static/css/all.min.css" />
+    <!-- CSS file -->
+    <link rel="stylesheet" href="/static/css/app.css" />
+
+    <title>{% block title %}{% endblock %}</title>
+
+    <!-- Python library module flash messages -->
+    {{ toastr.include_jquery() }} {{ toastr.include_toastr_css() }} {{
+    toastr.message() }}
+  </head>
+
+  <body>
+    <!-- Loader -->
+    <div id="loader" class="loader">
+  <div class="loader-inner ball-scale-multiple">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div><span class="tooltip">
+</div>
+
+    <!-- Navbar starts here... -->
+    <header>
+      <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="/"
+          ><img src="/static/img/logo.png" alt="logo"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav ml-auto">
+            <a class="nav-item nav-link" href="/">Home</a>
+            <a class="nav-item nav-link" href="/search">Flights</a>
+            <a class="nav-item nav-link" href="/search">Hotels</a>
+            <a class="nav-item nav-link" href="/search">Search</a>
+
+            {% if 'user_id' in session %}
+            <a class="nav-item nav-link" href="/logout">LogOut</a>
+            <a href="/dashboard/{{session['user_id']}}"
+              ><button class="btn-primaries btn py-2 px-4" type="button">
+                Dashboard
+              </button></a
+            >
+            {% else %}
+            <a href="/login"
+              ><button class="btn-primaries btn py-2 px-4" type="button">
+                Login
+              </button></a
+            >
+            {% endif %}
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    {% block content %}
+    <!-- Content goes here... -->
+    {% endblock %}
+
+    <!-- toastr modul flash messages python library -->
+    {{ toastr.include_toastr_js() }}
+
+    <script src="https://code.jquery.com/ui/1.10.2/jquery-ui.min.js"></script>
+    <script src="/static/js/app.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/js/all.min.js"></script>
+    <script src="/static/js/owl.carousel.min.js"></script>
+  </body>
+</html>

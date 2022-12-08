@@ -1,0 +1,29 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+flask = "==2.0"
+psycopg2 = "*"
+psycopg2-binary = "*"
+flask-sqlalchemy = "==2.3.2"
+gunicorn = "*"
+bcrypt = "==3.1.4"
+wtforms = "==2.2.1"
+requests = "==2.27.1"
+amadeus = "*"
+flask-bcrypt = "==0.7.1"
+flask-debugtoolbar = "==0.10.1"
+flask-toastr = "==0.5.7"
+flask-wtf = "==0.14.2"
+sqlalchemy = "==1.4.36"
+email-validator = "*"
+jinja2 = "==3.0"
+itsdangerous = "==0.24"
+flask-session = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.10.7"

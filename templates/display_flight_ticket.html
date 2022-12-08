@@ -1,0 +1,92 @@
+{% extends 'base.html' %} {% block title %} Tickets {% endblock %} {% block
+content %}
+
+<div class="dashboard-container">
+  <div class="container dashboard">
+    <!-- top -->
+    <div class="search-dashboard flex-between">
+      <a href="/search" class="btn-primaries">
+        <i class="fa-solid fa-search"></i>
+        Search Again</a
+      >
+      <div class="user-profile flex-center">
+        <form action="/login" method="POST">
+          <button>Login</button>
+        </form>
+      </div>
+    </div>
+    <!-- table -->
+    <!-- going tikets -->
+    <div class="heading">
+      <h5>Tikets</h5>
+    </div>
+    <div class="table-container">
+      <table>
+        <thead>
+          <th scope="col">Departure</th>
+          <th scope="col">Arrival</th>
+          <th scope="col">Departure at</th>
+          <th scope="col">Arrival at</th>
+          <th scope="col">Carrier</th>
+          <th scope="col">Duration</th>
+        </thead>
+        <tbody>
+          {% for flight in flights['going_away'] %}
+
+          <tr>
+            <td>{{ flight[0]['departures'] }}</td>
+
+            <td>{{ flight[0]['arrivals']}}</td>
+
+            <td>{{ flight[0]['departure_at'] }}</td>
+
+            <td>{{ flight[0]['arrival_at'] }}</td>
+
+            <td>{{ flight[0]['carrier_code'] }}</td>
+
+            <td>{{ flight[0]['duration'] }}</td>
+          </tr>
+
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    <!-- coming back tikets -->
+    <div class="heading">
+      <h5>Coming Back</h5>
+    </div>
+    <div class="table-container">
+      <table>
+        <thead>
+          <th scope="col">Departure</th>
+          <th scope="col">Arrival</th>
+          <th scope="col">Departure at</th>
+          <th scope="col">Arrival at</th>
+          <th scope="col">Carrier</th>
+          <th scope="col">Duration</th>
+        </thead>
+        <tbody>
+          {% for flight in flights['coming_back'] %}
+
+          <tr>
+            <td>{{ flight[0]['departures'] }}</td>
+
+            <td>{{ flight[0]['arrivals'] }}</td>
+
+            <td>{{ flight[0]['departure_at'] }}</td>
+
+            <td>{{ flight[0]['arrival_at'] }}</td>
+
+            <td>{{ flight[0]['carrier_code'] }}</td>
+
+            <td>{{ flight[0]['duration'] }}</td>
+          </tr>
+
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,263 @@
+{% extends 'base.html' %} {% block title %} Welcome to Flight Offer {% endblock
+%} {% block content %}
+
+<!-- hero section -->
+<div class="header flex-center">
+  <div class="sky-img">
+    <img src="/static/img/banners/3.png" />
+  </div>
+
+  <div class="absolute_position flex-center main-text-box">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-8">
+          <h1>The sky is waiting for you</h1>
+          <p>
+            We offer the best flight deals in the world. Find the best flight
+            deals and enjoy the best experience.We offer the best flight deals in the world.
+          </p>
+          <a href="/search" class="search-flight-btn">Search Flights</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  </div>
+  
+
+    <!-- destinations -->
+    <section class="popular-section container">
+      <h1>Popular Destinations</h1>
+      <hr />
+
+      <div class="popular-array">
+        <a href="/search">
+          <div class="popular-item">
+            <img src="/static/img/destnation/paris.png" alt="" />
+
+            <div class="popular-item-text">
+              <h5>Paris</h5>
+              <h6>$ 1,000 / person</h6>
+              <p>
+                Visit the city of love and enjoy the best food in romantic city
+                in the world.
+              </p>
+            </div>
+          </div>
+        </a>
+        <!-- 2 -->
+        <a href="/search">
+          <div class="popular-item">
+            <img src="/static/img/destnation/new-york.png" alt="" />
+
+            <div class="popular-item-text">
+              <h5>New York</h5>
+              <h6>$ 500 / person</h6>
+              <p>
+                New York is the city that never sleeps. Visit the Big Apple and
+                enjoy.
+              </p>
+            </div>
+          </div>
+        </a>
+        <!-- 3 -->
+        <a href="/search">
+          <div class="popular-item">
+            <img src="/static/img/destnation/seol.png" alt="" />
+
+            <div class="popular-item-text">
+              <h5>Korea Seoul</h5>
+              <h6>$ 350 / person</h6>
+              <p>
+                Fly with us to Korea with the best price and enjoy the best
+                experience in the world.
+              </p>
+            </div>
+          </div>
+        </a>
+        <!-- 4 -->
+        <a href="/search">
+          <div class="popular-item">
+            <img src="/static/img/destnation/dubai.png" alt="" />
+
+            <div class="popular-item-text">
+              <h5>Dubai</h5>
+              <h6>$ 150 / person</h6>
+              <p>
+                One night in Dubai is worth a lifetime. Fly with us to Dubai
+                now.
+              </p>
+            </div>
+          </div>
+        </a>
+        <!-- 5 -->
+        <a href="/search">
+          <div class="popular-item">
+            <img src="/static/img/destnation/tz.png" alt="" />
+
+            <div class="popular-item-text">
+              <h5>Tanzania</h5>
+              <h6>$ 250 / person</h6>
+              <p>
+                Visit the best safari in the world and enjoy the best experience
+                in Tanzania.
+              </p>
+            </div>
+          </div>
+        </a>
+        <!-- 6 -->
+        <a href="/search">
+          <div class="popular-item">
+            <img src="/static/img/destnation/japan.png" alt="" />
+
+            <div class="popular-item-text">
+              <h5>Tokyo</h5>
+              <h6>$ 6750 / person</h6>
+              <p>
+                Tokyo is the city of the future. Visit the city of the future
+                and enjoy the best experience.
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- flights -->
+    <div class="cards-flight-section">
+      <section class="container">
+        <h1>Upcoming Flights</h1>
+        <hr />
+
+        <div class="owl-carousel owl-theme flight_array">
+          <div class="flight_item">
+            <div class="flight_item_img">
+              <img src="/static/img/planes/6.png" alt="" />
+              <div class="flight_like_container flex-center">
+                <i class="far fa-heart"></i>
+              </div>
+            </div>
+            <a href="/">
+              <div class="flight_text">
+                <h5>London to Paris</h5>
+                <h6>One way flight</h6>
+                <p>
+                  London to Paris flight with the best price. Enjoy the best
+                  flight experience with us.
+                </p>
+                <div class="flex-between">
+                  <div class="flight_star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <h2>$4500</h2>
+                </div>
+              </div>
+            </a>
+          </div>
+          <!-- 2 -->
+          <div class="flight_item">
+            <div class="flight_item_img">
+              <img src="/static/img/planes/1.png" alt="" />
+              <div class="flight_like_container flex-center">
+                <i class="far fa-heart"></i>
+              </div>
+            </div>
+            <a href="/">
+              <div class="flight_text">
+                <h5>Tanzania to Korea</h5>
+                <h6>Return flight</h6>
+                <p>
+                  Tanzania to Korea flight with the best price. Enjoy the best
+                  flight experience with us.
+                </p>
+                <div class="flex-between">
+                  <div class="flight_star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                  </div>
+                  <h2>$130</h2>
+                </div>
+              </div>
+            </a>
+          </div>
+          <!-- 3 -->
+          <div class="flight_item">
+            <div class="flight_item_img">
+              <img src="/static/img/planes/2.png" alt="" />
+              <div class="flight_like_container flex-center">
+                <i class="far fa-heart"></i>
+              </div>
+            </div>
+            <a href="/">
+              <div class="flight_text">
+                <h5>New York to Dubai</h5>
+                <h6>One way flight</h6>
+                <p>
+                  New York to Dubai flight with the best price. Enjoy the best
+                  flight experience with us.
+                </p>
+                <div class="flex-between">
+                  <div class="flight_star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                  </div>
+                  <h2>$5000</h2>
+                </div>
+              </div>
+            </a>
+          </div>
+          <!-- 4 -->
+          <div class="flight_item">
+            <div class="flight_item_img">
+              <img src="/static/img/planes/3.png" alt="" />
+              <div class="flight_like_container active flex-center">
+                <i class="far fa-heart"></i>
+              </div>
+            </div>
+            <a href="/">
+              <div class="flight_text">
+                <h5>Quatar to Iceland</h5>
+                <h6>One way flight</h6>
+                <p>
+                  Fly with us to Iceland and enjoy the best flight experience
+                  with us in our new flight.
+                </p>
+                <div class="flex-between">
+                  <div class="flight_star">
+                    <i class="fas fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                  </div>
+                  <h2>$420</h2>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <!-- nav -->
+        <div class="next_prev flex-center">
+          <button class="prev flex-center">
+            <i class="fa-solid fa-caret-left"></i>
+          </button>
+          <button class="next flex-center">
+            <i class="fa-solid fa-caret-right"></i>
+          </button>
+        </div>
+      </section>
+    </div>
+
+    {% endblock %}
+  </div>
+</div>

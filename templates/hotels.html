@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% block title %} Hotels {% endblock %}
+
+{% block content %}
+
+<div class="hotel_main_container">
+    <a class="btn btn-lg btn-dark" href="/search/tickets/{{user_id}}">Ticket</a>
+    <a class="btn btn-lg btn-warning" href="/search">Search Flights</a>
+    <p class="lead ml-2">Hotels are based on flight departure and arrival date!</p>
+    <p class="lead ml-2"><span style="font-weight:500">Check in:</span>{{hotels[0]['offers'][0]['checkInDate']}}</p>
+    <p class="lead ml-2"><span style="font-weight:500">Check out:</span> {{hotels[0]['offers'][0]['checkOutDate']}}</p>
+    <div class="hotel_box">
+    {% for hotel in hotels %}
+    
+    <div class="img_box">
+      <img  src="https://source.unsplash.com/random?{{hotel['hotel']['name']}}">
+    </div>
+    
+    
+    
+    
+      <div class="hotel_name_price_box">
+        <div class="hotel_address_box">
+        <h1 class="hotel_name_h1">{{hotel['hotel']['name']}}</h1>
+        <p>{{hotel['hotel']['address']['lines'][0]}}</p>
+        <p>{{hotel['hotel']['address']['stateCode']}} {{hotel['hotel']['address']['cityName']}}</p>
+        <p>{{hotel['hotel']['address']['countryCode']}}, {{hotel['hotel']['address']['postalCode']}}</p>
+        <h4>Contact</h4>
+        <p>phone: {{hotel['hotel']['contact']['phone']}}</p>
+        <p>fax: {{hotel['hotel']['contact']['fax']}}</p>
+    </div>
+        <div class="total_price">
+        <h1 class="total_price_h1">{{hotel['offers'][0]['price']['currency']}}{{hotel['offers'][0]['price']['total']}}</h1>
+        <span>per person</span>
+        <p>Rating: {{hotel['hotel']['rating']}}</p>
+        <p>Distance: {{hotel['hotel']['hotelDistance']['distance']}}{{hotel['hotel']['hotelDistance']['distanceUnit']}}</p>
+    </div>
+    
+      </div>
+      
+        
+      
+    <div class="room_information_box">
+    <div class="type_size_bed_box">
+        <h2>{{hotel['offers'][0]['room']['typeEstimated']['category']}}</h3>
+        <p>Bed: {{hotel['offers'][0]['room']['typeEstimated']['bedType']}}</p>
+        <p>{{hotel['offers'][0]['room']['description']['text']}}</p>
+        </div>
+    </div>
+    
+    <div class="amenities">
+        <h1>Amenities</h1>
+        <ul class="amenities_ul">
+          {% for amenities in hotel['hotel']['amenities'] %}
+          <li>{{amenities}}</li>
+          {% endfor %}
+        </ul>
+        
+        </div>
+   
+    {% endfor %}
+</div>
+    </div>
+    
+{% endblock %}
+
+    
+    
+     
+    
+    

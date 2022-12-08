@@ -1,0 +1,214 @@
+/* Variables */
+
+.header {
+  width: 100%;
+  height: 600px;
+  background:--var(--main_color_dark);
+  position: relative;
+}
+
+.sky-img {
+  width: 100%;
+  height: 100%;
+
+}
+.sky-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.main-text-box {
+background-color: #00000090;
+}
+
+.main-text-box h1 {
+  font-size: 3rem;
+  color: var(--white);
+  font-weight: 600;
+}
+.main-text-box p{
+  font-size: 1rem;
+  color: var(--white);
+  line-height: 1.8rem;
+  margin: 2rem 0 3rem 0;
+  padding-right: 18rem;
+}
+
+.search-flight-btn {
+  font-size: 1rem;
+  border-radius: 10px;
+  padding: .9rem 2.5rem;
+  background-color:var(--main_color);
+  color: var(--white);
+  transition: .2s linear;
+}
+
+.search-flight-btn:hover {
+  background-color: var(--white);
+  color: var(--main_color);
+  transition: .5s linear;
+}
+
+
+/* ################### POPULAR SECTION ########################### */
+
+.popular-section {
+padding: 8rem 0;
+}
+.popular-section h1,.cards-flight-section h1{
+  font-size: 2rem;
+  font-family: 'Merriweather',sans-serif;
+  color: var(--black);
+  font-weight: 700;
+}
+.popular-section hr,.cards-flight-section hr{
+  width: 6%;
+  height: 3px;
+  background-color: var(--main_color);
+  margin: 1rem 0;
+}
+.popular-array{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-gap: 2rem;
+  margin-top: 4rem;
+
+}
+.popular-item{
+  background-color: var(--white);
+  padding: .5rem;
+  border-radius: 10px;
+  box-shadow: 0px 3px 20px -3px rgba(0, 0, 0, 0.104);
+  transition: .2s linear;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.popular-item:hover{
+  transform: scale(1.05);
+  transition: .5s linear;
+  background-color: var(--main_color_light);
+}
+.popular-item img{
+  width: 40%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.popular-item .popular-item-text{
+  padding: .5rem 0;
+}
+.popular-item .popular-item-text h5,.flight_text h5{
+  font-size: 1.2rem;
+  color: var(--black);
+  font-weight: 600;
+}
+
+.popular-item .popular-item-text h6,.flight_text h6{
+  font-size: .8rem;
+  color: var(--main_color);
+  font-weight: 800;
+ font-family: serif;
+margin: .5rem 0;
+}
+.popular-item .popular-item-text p,.flight_text p{
+  font-size: .8rem;
+  color: gray
+}
+
+ /* ####################### CARDS FLIGHT SECTION ############################## */
+.cards-flight-section{
+  padding: 9rem 0;
+  background-color: var(--main_color_light);
+}
+.flight_array{
+  margin-top: 2rem;
+}
+
+.flight_item{
+  position: relative;
+  padding: .6rem;
+  border-radius: 10px;
+  box-shadow: 0px 3px 20px -3px rgba(0, 0, 0, 0.104);
+  transition: .2s linear;
+  background-color: var(--white);
+  overflow: hidden;
+}
+.flight_item:hover{
+  transform: scale(.97);
+  transition: .5s linear;
+box-shadow: 0px 3px 20px -3px rgba(0, 0, 0, 0.117);
+}
+.flight_item_img{
+  width: 100%;
+  height: 200px;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+.flight_item_img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.flight_item_img .flight_like_container{
+  position: absolute;
+  top: .4rem;
+  right:.4rem;
+  width: 35px;
+  height: 35px;
+  background-color: var(--white);
+  border-radius: 50%;
+  color: var(--main_color);
+}
+.flight_item_img .flight_like_container:hover,.flight_item_img .active{
+  background-color: var(--main_color);
+  color: var(--white);
+  transition: .5s linear;
+}
+.flight_text{
+  padding: .8rem .2rem .2rem .2rem;
+}
+.flight_text h5{
+  font-size: 1rem;
+}
+.flight_star{
+  display: flex;
+  gap: .5rem;
+  margin: .5rem 0;
+  color: orange;
+  font-size: .8rem;
+}
+.flight_text h2{
+  font-size: 1.2rem;
+  color: var(--black);
+  font-weight: 600;
+}
+.owl-carousel .owl-stage-outer{
+  padding: 4rem 0;
+}
+.next_prev{
+ margin-top: 2rem;
+ gap: 1rem;
+ width: 100%;
+}
+.next_prev button{
+  background-color: var(--main_color);
+  color: var(--white);
+  width: 45px;
+  height: 40px;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: .2s linear;
+}
+
+.next_prev button:hover{
+  background-color: var(--white);
+  color: var(--main_color);
+  transition: .5s linear;
+  border: 1px solid var(--main_color);
+}
+
+
+

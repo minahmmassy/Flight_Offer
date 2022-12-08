@@ -1,0 +1,15 @@
+{% extends 'base.html' %} {% block title %} Register Form {% endblock %} {%
+block content %}
+
+<div class="container flex-center container-full">
+  <form class="form-container" method="post">
+    <img src="/static/img/logo.png" alt="logo" class="img-fluid" />
+    <h5>New here? Create an account</h5>
+
+    {% include 'register_login_form.html' %}
+
+    <button>Register</button>
+    <h6>Already have an account? <a href="/login"> Login</a></h6>
+  </form>
+</div>
+{% endblock %}

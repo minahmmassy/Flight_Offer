@@ -1,0 +1,109 @@
+{% extends 'base.html' %} {% block title %} Dashboard {% endblock %} {% block
+content %}
+<div class="dashboard-container">
+  <div class="container dashboard">
+    <!-- profile -->
+    <div class="search-dashboard flex-between">
+      <a href="/search" class="btn-primaries">
+        <i class="fa-solid fa-search"></i>
+        Search Again</a
+      >
+      <div class="user-profile flex-center">
+        <p>Welcome, {{user.first_name}}!</p>
+        <img src="/static/img/user.png" alt="profile picture" />
+      </div>
+    </div>
+    <!-- cards -->
+    <div class="dash_cards-array">
+      <div class="dash_card flex-columns">
+        <div class="dash_card-header flex-center">
+          <i class="fa-solid fa-heart"></i>
+        </div>
+        <h5>Favorites</h5>
+        <p>15 Airplanes</p>
+      </div>
+      <!-- 2 -->
+      <div class="dash_card flex-columns">
+        <div class="dash_card-header flex-center">
+          <i class="fa-solid fa-plane"></i>
+        </div>
+        <h5>Trips</h5>
+        <p>6 Destination</p>
+      </div>
+      <!-- 3 -->
+      <div class="dash_card flex-columns">
+        <div class="dash_card-header flex-center">
+          <i class="fa-solid fa-user-friends"></i>
+        </div>
+        <h5>Friends</h5>
+        <p>88 Friends</p>
+      </div>
+    </div>
+    <!-- table -->
+    <div class="table-container">
+      <table>
+        <thead>
+          <th scope="col">Departure</th>
+          <th scope="col">Destination</th>
+          <th scope="col">Departure Date</th>
+          <th scope="col">Price</th>
+          <th scope="col">Notes</th>
+          <th scope="col">Actions</th>
+        </thead>
+        <tbody>
+          {% for wish in user.wishlist %}
+          <tr>
+            <td>{{wish.origin}}</td>
+
+            <td>{{wish.destination}}</td>
+
+            <td>{{wish.departure_date}}</td>
+            <td>${{wish.ticket_price}}</td>
+            <td>
+              <form action="/edit_note/{{wish.id}}" method="POST">
+                <div class="table-notes flex-between">
+                  {% if wish.notes == None %}
+                  <input
+                    name="textarea"
+                    placeholder="Write your note here..."
+                  />
+                  {% else %}
+                  <input
+                    name="textarea"
+                    placeholder="Write your note here..."
+                    value="{{wish.notes}}"
+                  />
+
+                  {% endif %}
+
+                  <button
+                    id="dashboard_edit_add_btn"
+                    type="submit"
+                    formaction="/edit_note/{{wish.id}}"
+                    class="btn btn-sm btn-primary"
+                  >
+                    {% if wish.notes == None %}
+                    <i class="fa-regular fa-square-plus"></i>
+                    {% else %}
+                    <i class="fa-regular fa-pen-to-square"></i>
+                    {% endif %}
+                  </button>
+                </div>
+              </form>
+            </td>
+            <td>
+              <form action="/dashboard/{{wish.id}}/delete" method="POST">
+                <button type="submit" class="btn btn-sm btn-danger">
+                  <i class="fa-solid fa-trash-can"></i>
+                </button>
+              </form>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  {% endblock %}
+</div>

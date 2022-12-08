@@ -1,0 +1,12 @@
+<!-- REGISTRATION AND LOGIN FORM PLATE -->
+
+{{ form.hidden_tag() }} {% for field in form if field.widget.input_type !=
+'hidden' %}
+
+<p>
+  {{ field.label }} {{ field(class_='form-control input') }} {% for error in
+  field.errors %}
+  <span class="text text-danger error">{{ error }}</span>
+  {% endfor %}
+</p>
+{% endfor %}
